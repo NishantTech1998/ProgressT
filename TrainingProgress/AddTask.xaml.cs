@@ -16,18 +16,18 @@ using System.Windows.Shapes;
 namespace TrainingProgress
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddTask.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddTask : Page
     {
-        public MainWindow()
+        public AddTask()
         {
             InitializeComponent();
-            MainFrame.Source= new Uri("Page1.xaml", UriKind.RelativeOrAbsolute);
         }
 
-       
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-       
+        }
     }
 }
