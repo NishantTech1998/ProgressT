@@ -18,13 +18,13 @@
             </Label.Effect>
         </Label>
         <Label HorizontalAlignment="Left" Margin="343,175,0,0" VerticalAlignment="Top" Width="162" Foreground="White" FontSize="24" Background="{x:Null}" Content="Task Title" Height="54"/>
-        <TextBox HorizontalAlignment="Left" Height="33" Margin="301,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" TextChanged="TextBox_TextChanged" Background="White"/>
-        <Button x:Name="Add" Content="ADD TASK" HorizontalAlignment="Left" Margin="133,373,0,0" VerticalAlignment="Top" Width="147" Height="41" FontFamily="MV Boli" FontWeight="ExtraBold" Background="#FF1DB8B8" BorderBrush="#FF0F1E34" Panel.ZIndex="4" BorderThickness="6,1,1,1" >
+        <TextBox x:Name="TaskTextBox" HorizontalAlignment="Left" Height="33" Margin="301,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" TextChanged="TextBox_TextChanged" Background="White" FontFamily="Segoe UI Black" FontSize="14" AutomationProperties.IsRequiredForForm="True"/>
+        <Button x:Name="Add" Content="ADD TASK" HorizontalAlignment="Left" Margin="138,348,0,0" VerticalAlignment="Top" Width="147" Height="41" FontFamily="MV Boli" FontWeight="ExtraBold" Background="#FF1DB8B8" BorderBrush="#FF0F1E34" Panel.ZIndex="4" BorderThickness="6,1,1,1" Click="Add_Click" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="Back" Content="GO BACK" HorizontalAlignment="Left" Margin="480,373,0,0" VerticalAlignment="Top" Width="147" Height="41" FontFamily="MV Boli" FontWeight="ExtraBold" Background="#FF1DB8B8" BorderBrush="#FF0F1E34" Panel.ZIndex="4" BorderThickness="6,1,1,1" >
+        <Button x:Name="Back" Content="GO BACK" HorizontalAlignment="Left" Margin="486,348,0,0" VerticalAlignment="Top" Width="147" Height="41" FontFamily="MV Boli" FontWeight="ExtraBold" Background="#FF1DB8B8" BorderBrush="#FF0F1E34" Panel.ZIndex="4" BorderThickness="6,1,1,1" Click="Back_Click" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

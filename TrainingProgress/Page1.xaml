@@ -22,7 +22,12 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="StartTrack" Content="START TRACKING" HorizontalAlignment="Left" Margin="326,211,0,0" VerticalAlignment="Top" Width="147" Height="41" FontFamily="MV Boli" FontWeight="ExtraBold" Background="#FF1DB8B8" BorderBrush="#FF0F1E34" Panel.ZIndex="4" BorderThickness="6,1,1,1" MouseEnter="AddTask_MouseEnter">
+        <Button x:Name="StartTrack" Content="START TRACKING" HorizontalAlignment="Left" Margin="326,211,0,0" VerticalAlignment="Top" Width="147" Height="41" FontFamily="MV Boli" FontWeight="ExtraBold" Background="#FF1DB8B8" BorderBrush="#FF0F1E34" Panel.ZIndex="4" BorderThickness="6,1,1,1" MouseEnter="AddTask_MouseEnter" Click="StartTrack_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="ViewTask" Content="VIEW TASK" HorizontalAlignment="Left" Margin="326,288,0,0" VerticalAlignment="Top" Width="147" Height="41" FontFamily="MV Boli" FontWeight="ExtraBold" Background="#FF1DB8B8" BorderBrush="#FF0F1E34" Panel.ZIndex="4" BorderThickness="6,1,1,1" MouseEnter="AddTask_MouseEnter" Click="ViewTask_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

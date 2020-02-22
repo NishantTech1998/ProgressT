@@ -10,12 +10,12 @@ namespace Model
     {
         public int Id { get; set; }
         public string TaskName { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public DateTime TaskDate { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
+        public string TaskDate { get; set; }
         public bool IsPlanned { get; set; }
         public bool IsPaused { get; set; }
-        public DateTime TotalTimeTaken { get; set; }
+        public string TotalTimeTaken { get; set; }
 
     }
 }

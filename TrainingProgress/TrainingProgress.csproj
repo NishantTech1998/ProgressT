@@ -179,6 +179,12 @@
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaskProgressContext.cs" />
+    <Compile Include="Tracking.xaml.cs">
+      <DependentUpon>Tracking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTask.xaml.cs">
+      <DependentUpon>ViewTask.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,6 +202,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tracking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -231,6 +245,10 @@
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{b38e4fca-4d0c-474b-904d-77bcaa319a54}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{699eec66-63d1-4503-bde5-0778f9393d99}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

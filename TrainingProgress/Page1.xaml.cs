@@ -41,5 +41,15 @@ namespace TrainingProgress
         {
             this.NavigationService.Source = new Uri("AddTask.xaml", UriKind.Relative);
         }
+
+        private void StartTrack_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Source = new Uri("Tracking.xaml", UriKind.Relative);
+        }
+
+        private void ViewTask_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Source = new Uri("ViewTask.xaml", UriKind.Relative);
+        }
     }
 }

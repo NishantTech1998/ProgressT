@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Model;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace Services
 {
@@ -12,9 +13,23 @@ namespace Services
     {
         public DbSet<Tasks> Tasks { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        private static bool _created;
+        public TaskProgressContext()
         {
-            optionsBuilder.UseSqlite("Filename=./task.db");
+            if (File.Exists("Sample.db"))
+                _created = true;
+            else
+                _created = false;
+            if (!_created)
+            {
+                _created = true;
+                Database.EnsureDeleted();
+                Database.EnsureCreated();
+            }
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
+        {
+            optionbuilder.UseSqlite(@"Data Source=Sample.db");
         }
     }
 }

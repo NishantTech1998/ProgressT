@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Model;
+using Services;
 
 namespace TrainingProgress
 {
@@ -28,6 +30,24 @@ namespace TrainingProgress
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Source = new Uri("Page1.xaml", UriKind.Relative);
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            Tasks task = new Tasks();
+            task.TaskName = TaskTextBox.Text;
+            task.IsPaused = false;
+            task.IsPlanned = true;
+            task.TaskDate = DateTime.Now.ToString("d");
+            task.TotalTimeTaken = "0.0";
+            TaskService taskService = new TaskService();
+            taskService.AddTask(task);
+            TaskTextBox.Text= "";
         }
     }
 }
